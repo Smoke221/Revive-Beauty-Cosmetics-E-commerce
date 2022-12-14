@@ -1,0 +1,223 @@
+/* *{
+    font-family: 'Lato', sans-serif;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    background-color: #fff;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+#nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    width: 83%;
+    position: -ms-page;
+    font-family: 'Lato', sans-serif;
+}
+
+#logo-name {
+    display: flex;
+    align-items: center;
+    width: 25%;
+}
+
+#logo {
+    width: 30%;
+    height: 10%;
+}
+
+#rbname {
+    text-decoration: none;
+    font-size: xx-large
+}
+
+#search {
+    width: 450px;
+    height: 30px;
+    border: 0.5px solid gray;
+}
+
+#login-main,
+#cart-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#categories {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    width: 73.5%;
+    color: rgb(105, 105, 105);
+    padding-bottom: 10px;
+}
+#categories a{
+    text-decoration: none;
+    color: rgb(105, 105, 105);
+}
+#offers-top{
+    background-color: #f2f2f2;
+}
+#about-top {
+    padding-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: -10%;
+    margin: auto;
+    width: 68%;
+    font-family: 'Lato', sans-serif;
+}
+
+#clickable-offer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    background-color: #ccc;
+    color: rgb(77, 77, 77);
+    font-size: 14px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    margin-top: 7.3%;
+    width: max-content;
+    padding-top: 0.5%;
+    margin: auto;
+}
+
+.dropdown-menu a {
+    color: rgb(0, 0, 0);
+    font-size: small;
+    padding: 10px 50px;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    text-align: start;
+    background-color: rgba(255, 255, 255, 0.991);
+    font-family: 'Lato', sans-serif;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(238, 235, 235, 0.991);
+}
+
+#dropdown:hover .dropdown-menu {
+    display: block;
+}
+.swiper-slide>img{
+    width: 100%;
+}
+.swiper-slide{
+    display: flex;
+    /* -webkit-box-pack: center; */
+    /* -ms-flex-pack: center; */
+    justify-content: center;
+    /* -webkit-box-align: center; */
+    align-items: center;
+    position: relative;
+}
+.slide-text{
+position: absolute;
+right: 7%;
+font-family: 'Lato', sans-serif;
+}
+.slide-text h2{
+    color: #fff;
+    font-size: 60px;
+    margin: 0;
+}
+.slide-text p{
+    color: #fff;
+    font-size: 16px;
+}
+.slide-text h1{
+    font-size: 50px;
+}
+.slide-text h1+p{
+    color: black;
+}
+.slide-text h2+p+button{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    height: 35px;
+}
+.slide-text h1+p+button{
+    color: white;
+    background-color: black;
+    width: auto;
+    height: 35px;
+}
+/* Shob by category */
+#shop-by-category{
+    text-align: center;
+}
+.img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 238px;
+    margin: auto;
+}
+.img-container>img{
+    width: 100%;
+}
+#btm-singup p+button{
+    color: white;
+    background-color: black;
+    width: auto;
+    height: 35px;
+}
+#btm-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    width: 80%;
+}
+
+#btm-mid {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+}
+
+#myaccount {
+    margin-right: 100px;
+}
+
+#btm-mid {
+    width: 75%;
+    margin: auto;
+    font-family: 'Lato', sans-serif;
+}
+
+#services>p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#ion-size {
+    font-size: 25px;
+}
+
+#btm-mid-right {
+    display: flex;
+}
+
