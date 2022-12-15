@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div id="top-section">
         <header>
@@ -18,15 +20,20 @@
                     <a id="rbname" href="RB.html">REVIVE BEAUTY</a>
                 </div>
                 <div id="search-main">
-                    <input id="search" type="text" placeholder="Search for a product or brand....">
+                    <input oninput="search()" id="search" type="text" placeholder="Search for a product or brand....">
                 </div>
                 <div id="login-main">
                     <a href=""><ion-icon name="person-outline"></ion-icon></a>
-                    <p>Account</p>
+                    <a id="dropdown">Account 
+                        <p class="dropdown-menu">
+                            <button onclick="nav_login()" id="signin">LOGIN</button> <br> <br>
+                            <button onclick="nav_register()" id="signup">REGISTER</button>
+                        </p>
+                    </a>
                 </div>
                 <div id="cart-main">
                     <a href=""><ion-icon name="bag-outline"></ion-icon></a>
-                    <p>Cart</p>
+                    <a href="./cart.html">Cart</a>
                 </div>
             </div>
             <div id="categories">
@@ -61,37 +68,41 @@
                 <div>Skin 101</div>
             </div>
         </header>
-       <div id="offers-top">
-        <div id="about-top">
-            <p>FREE US Shipping $50+</p>
-            <p>New Customers Save 15%*</p>
-            <p>Rewards</p>
-            <p>Ask The Esthetician</p>
-            <p>Download Our App</p>
-            <p>Refer a Friend, Get $ 15</p>
+        <div id="offers-top">
+            <div id="about-top">
+                <p>FREE US Shipping $50+</p>
+                <p>New Customers Save 15%*</p>
+                <p>Rewards</p>
+                <p>Ask The Esthetician</p>
+                <p>Download Our App</p>
+                <p>Refer a Friend, Get $ 15</p>
+            </div>
         </div>
-       </div>
         <div id="clickable-offer">
             <p><b>Enjoy 20% off SkinMedica. SHOP NOW</b></p>
         </div>
     </div>
     <div id="main">
         <div id="which-page-u-in">
-            <a href="RB.html">Home /</a> 
+            <a href="RB.html">Home /</a>
             <a href="makeup.html">Makeup</a>
         </div>
         <div id="sponsored-ad">
             <div id="tile-1">
                 <p id="ad">Sponsored</p>
-                <h2>Chantecaille</h2>
+                <h2>Eminence</h2>
                 <p>Get a natural-looking glow,powered by botanicals</p>
                 <button>SHOP NOW</button>
             </div>
             <div id="tile-2">
-                <img src="https://static.thcdn.com/images/small/original/productimg/1600/1600/11423383-1294475983639071.jpg" alt="">
+                <img src="https://static.thcdn.com/images/small/original//productimg/original/12902998-1974871804869170.jpg"
+                    alt="">
+                <p>Revive Beauty Collection Large Puffy Zip Pouch </p><h3>$19</h3>
             </div>
             <div id="tile-3">
-                <img src="https://static.thcdn.com/images/small/webp//productimg/original/11370360-9104866342912066.jpg" alt="">
+                <img src="https://static.thcdn.com/images/small/webp//productimg/original/11370360-9104866342912066.jpg"
+                    alt="">
+                <p>Herbal Eye Make-up Remover</p><h3>$24</h3>
             </div>
         </div>
         <hr>
@@ -136,8 +147,12 @@
             </div>
             <div id="products">
                 <h2>Makeup</h2>
-                <p>When you're ready to tackle the world of contouring, highlighting and barely-there makeup looks, let Dermstore be your go-to for cosmetics. Industry faves, such as <br> Dermablend, jane iredale, Jouer and Tarte Cosmetics, often use skin-nourishing ingredients in their classic and playful pieces that draw upon your natural beauty. And <br> since beauty is all about expressing yourself, you can't go wrong.</p>
-                Sort By  <select name="" id="option-sort">
+                <p>When you're ready to tackle the world of contouring, highlighting and barely-there makeup looks, let
+                    Dermstore be your go-to for cosmetics. Industry faves, such as <br> Dermablend, jane iredale, Jouer
+                    and Tarte Cosmetics, often use skin-nourishing ingredients in their classic and playful pieces that
+                    draw upon your natural beauty. And <br> since beauty is all about expressing yourself, you can't go
+                    wrong.</p>
+                Sort By <select onchange="sortbyname()" name="" id="option-sort">
                     <option value="">Default</option>
                     <option value="">BestSellers</option>
                     <option value="">A to Z</option>
@@ -149,5 +164,6 @@
         </div>
     </div>
 </body>
+
 </html>
 <script src="./makeup.js"></script>

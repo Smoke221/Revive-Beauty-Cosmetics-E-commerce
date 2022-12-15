@@ -45,7 +45,16 @@ header{
     align-items: center;
     justify-content: space-between;
 }
-
+#login-main .dropdown-menu{
+    padding-top: 12px;
+    background-color: #fff;
+}
+.dropdown-menu button{
+    color: white;
+    background-color: black;
+    width: 150px;
+    height: 32px;
+}
 #categories {
     display: flex;
     justify-content: space-around;
@@ -166,6 +175,9 @@ a{
     gap: 10rem;
     font-family: 'Lato', sans-serif;
 }
+#option-sort{
+    margin-bottom: 20px;
+}
 #products h2+p{
     font-size: 14.5px;
 }
@@ -199,4 +211,7 @@ a{
     width: auto;
     height: 35px;
     margin: auto;
+}
+#each-product p+p{
+    font-weight: bold;
 }
