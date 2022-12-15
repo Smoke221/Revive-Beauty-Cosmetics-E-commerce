@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Revive Beauty</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<style>
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9;
+        background-color: #fff;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    }
+
+    #nav-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+        width: 83%;
+        position: -ms-page;
+        font-family: 'Lato', sans-serif;
+    }
+
+    #logo-name {
+        display: flex;
+        align-items: center;
+        width: 25%;
+    }
+
+    #logo {
+        width: 30%;
+        height: 10%;
+    }
+
+    #rbname {
+        text-decoration: none;
+        font-size: xx-large
+    }
+
+    #search {
+        width: 450px;
+        height: 30px;
+        border: 0.5px solid gray;
+    }
+
+    #login-main,
+    #cart-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #login-main .dropdown-menu {
+        padding-top: 12px;
+        background-color: #fff;
+    }
+
+    .dropdown-menu button {
+        color: white;
+        background-color: black;
+        width: 150px;
+        height: 32px;
+    }
+
+    #categories {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+        width: 73.5%;
+        color: rgb(105, 105, 105);
+        padding-bottom: 10px;
+    }
+
+    #categories a {
+        text-decoration: none;
+        color: rgb(105, 105, 105);
+    }
+
+    #offers-top {
+        background-color: #f2f2f2;
+    }
+
+    #about-top {
+        padding-top: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: -10%;
+        margin: auto;
+        width: 68%;
+        font-family: 'Lato', sans-serif;
+    }
+
+    #clickable-offer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        background-color: #ccc;
+        color: rgb(77, 77, 77);
+        font-size: 14px;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        z-index: 2;
+        margin-top: 7.3%;
+        width: max-content;
+        padding-top: 0.5%;
+        margin: auto;
+    }
+
+    .dropdown-menu a {
+        color: rgb(0, 0, 0);
+        font-size: small;
+        padding: 10px 50px;
+        text-decoration: none;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        text-align: start;
+        background-color: rgba(255, 255, 255, 0.991);
+        font-family: 'Lato', sans-serif;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: rgba(238, 235, 235, 0.991);
+    }
+
+    #dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    #cart-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        width: 72%;
+        font-family: 'Lato', sans-serif;
+    }
+
+    #checkout {
+        color: white;
+        background-color: black;
+        height: 35px;
+        padding: 0px 15px 0px 15px;
+    }
+</style>
+
+<body>
+    <header>
+        <div id="nav-container">
+            <div id="logo-name">
+                <img id="logo" src="./nobg2.png" alt="#">
+                <a id="rbname" href="RB.html">REVIVE BEAUTY</a>
+            </div>
+            <div id="search-main">
+                <input id="search" type="text" placeholder="Search for a product or brand....">
+            </div>
+            <div id="login-main">
+                <a href=""><ion-icon name="person-outline"></ion-icon></a>
+                <p>Account</p>
+            </div>
+            <div id="cart-main">
+                <a href=""><ion-icon name="bag-outline"></ion-icon></a>
+                <p>Cart</p>
+            </div>
+        </div>
+        <div id="categories">
+            <div id="dropdown">Brands
+                <p class="dropdown-menu">
+                    <a href="">A</a>
+                    <a href="">B</a>
+                    <a href="">D</a>
+                    <a href="">E</a>
+                    <a href="">F</a>
+                    <a href="">G</a>
+                    <a href="">H</a>
+                    <a href="">I</a>
+                    <a href="">J</a>
+                    <a href="">K</a>
+                    <a href="">L</a>
+                </p>
+            </div>
+            <div>Holiday <br> Shop</div>
+            <div>Browse By</div>
+            <div>BestSellers</div>
+            <div>Skin <br> Care</div>
+            <div> <a href="makeup.html">Make Up</a></div>
+            <div>Hair <br> Care</div>
+            <div>Fragrance <br> Shop</div>
+            <div>Bath & <br>Body</div>
+            <div>Tools & <br>Devices</div>
+            <div>Gifts & <br>sets</div>
+            <div>BeautyFIX</div>
+            <div>Offers</div>
+            <div>New</div>
+            <div>Skin 101</div>
+        </div>
+    </header>
+    <div id="offers-top">
+        <div id="about-top">
+            <p>FREE US Shipping $50+</p>
+            <p>New Customers Save 15%*</p>
+            <p>Rewards</p>
+            <p>Ask The Esthetician</p>
+            <p>Download Our App</p>
+            <p>Refer a Friend, Get $ 15</p>
+        </div>
+    </div>
+    <div id="clickable-offer">
+        <p><b>Enjoy 20% off SkinMedica. SHOP NOW</b></p>
+    </div> <br>
+    <div id="cart-bar">
+        <h2>Your Cart</h2>
+        <button id="checkout">CHECKOUT SECURELY NOW</button>
+    </div>
+    <div id="above $10"></div>
+    <div id="above $50"></div>
+    <div id="cart-container">
+        <div id="products"></div>
+        <div id="cart-total">
+            <h2>Cart Subtotal: <span id="amount"></span></h2>
+        </div>
+    </div>
+</body>
+
+</html>
