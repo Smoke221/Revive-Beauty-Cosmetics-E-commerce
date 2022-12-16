@@ -8,6 +8,7 @@
     <title>Your Details</title>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
 </head>
 <style>
     body {
@@ -89,7 +90,16 @@
     }
 
     ion-icon {
-        font-size: 20px;
+        font-size: 30px;
+        color: blue;
+    }
+
+    .fa-google {
+        background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
     }
 
     .input-control span {
@@ -115,7 +125,7 @@
             <p>Sign Up With</p>
             <div id="social-signup">
                 <button> <ion-icon name="logo-facebook"></ion-icon></button>
-                <button> <ion-icon name="logo-google"></ion-icon></button>
+                <button> <i class="fab fa-google fa-2x"></i></button>
             </div>
             <p>Or create an email account </p>
             <div class="input-control"> Full Name <br>

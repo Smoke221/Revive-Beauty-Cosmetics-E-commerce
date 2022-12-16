@@ -8,14 +8,17 @@
     <title>Login</title>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
 </head>
 <style>
-    *{
+    * {
         font-family: 'Lato', sans-serif;
     }
-    body{
+
+    body {
         background-color: #f2f2f2;
     }
+
     #nav {
         background-color: white;
     }
@@ -42,40 +45,47 @@
         width: 30%;
         height: 10%;
     }
-    #container{
+
+    #container {
         display: flex;
         align-items: flex-start;
         justify-content: center;
         gap: 3rem;
         margin: auto;
     }
+
     #register {
         color: white;
         background-color: black;
         width: 102%;
         height: 35px;
     }
-    br+button{
+
+    br+button {
         color: white;
         background-color: black;
         width: 102%;
         height: 35px;
     }
+
     input {
         width: 100%;
         height: 30px;
     }
-    #login{
+
+    #login {
         background-color: white;
         padding: 0px 70px 40px 60px;
         margin-top: 30px;
         width: 20%;
     }
+
     #social-login {
         display: flex;
         justify-content: space-between;
         gap: 2rem;
     }
+
     #social-login>button {
         background: transparent;
         width: 200%;
@@ -83,10 +93,21 @@
         height: 40px;
         color: rgb(133, 133, 133);
     }
+
     ion-icon {
-        font-size: 25px;
+        font-size: 30px;
+        color: blue;
     }
-    #signup{
+
+    .fa-google {
+        background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+
+    #signup {
         background-color: white;
         padding: 0px 70px 40px 60px;
         margin-top: 30px;
@@ -117,19 +138,20 @@
             <p>Or, Continue with</p>
             <div id="social-login">
                 <button> <ion-icon name="logo-facebook"></ion-icon></button>
-                <button> <ion-icon name="logo-google"></ion-icon></button>
+                <button> <i class="fab fa-google fa-2x"></i></button>
             </div>
         </div>
         <div id="signup">
             <h3>New Customers</h3> <br>
-            <button id="register" >REGISTER</button>
+            <button id="register">REGISTER</button>
         </div>
     </div>
 </body>
+
 </html>
 <script>
     let registerBtn = document.querySelector('#register')
-    registerBtn.addEventListener('click',e => {
+    registerBtn.addEventListener('click', e => {
         e.preventDefault()
         window.location.href = "signup.html"
     })
@@ -140,7 +162,7 @@
         login()
     })
 
-    function login(){
+    function login() {
         let email = document.querySelector('.email')
         let password = document.querySelector('.password')
     }
@@ -153,11 +175,11 @@
         inputControl.classList.add("success");
         inputControl.classList.remove("error");
 
-        if(email.value === ''){
-        setError(email,'Email is required')
-    }
-    if(password.value === ''){
-        setError(password, 'Password is required')
-    }
+        if (email.value === '') {
+            setError(email, 'Email is required')
+        }
+        if (password.value === '') {
+            setError(password, 'Password is required')
+        }
     }
 </script>
