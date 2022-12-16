@@ -158,6 +158,83 @@
         height: 35px;
         padding: 0px 15px 0px 15px;
     }
+    #cart-container{
+        display: flex;
+        align-items: start;
+        width: 73%;
+        margin: auto;
+        font-family: 'Lato', sans-serif;
+        font-size: 15px;
+    }
+    #img{
+        width: 10%;
+    }
+    #cart-prod-cont{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        margin: auto;
+        width: 90%;
+        padding-right: 40%;
+    }
+    #cart-total{
+        padding-right: 20%;
+    }
+    #cart-count{
+        position: absolute;
+        background-color: black;
+        color: rgb(255, 255, 255);
+        left: 7.5px;
+        top: 10px;
+        border-radius: 50%;
+        width: 25%;
+        text-align: center;
+        font-size: 11px;
+    }
+    #cart-main{
+        position: relative;
+    }
+    ion-icon{
+        color: black;
+    }
+    #quantity-info{
+        display: flex;
+        align-items: center;
+        margin: auto;
+        justify-content: center;
+        gap: 1rem;
+    }
+    #quantity-info>button{
+        background: transparent;
+        border: 0px;
+        height: 20px;
+        font-size: 16px;
+    }
+    hr{
+        width: 90%;
+        margin-left: 0.5%;
+        color: #cecece;
+    }
+    #quantity-info+button, #remove-from-cart{
+        background: transparent;
+        border: 0;
+    }
+    #cart-main, #login-main{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.3rem;
+    }
+    #img+p{
+        width: 30%;
+    }
+    #remove-from-cart:hover{
+        background-color: #ccc;
+    }
+    #quantity-info+p{
+        font-weight: bold;
+    }
 </style>
 
 <body>
@@ -175,8 +252,8 @@
                 <p>Account</p>
             </div>
             <div id="cart-main">
-                <a href=""><ion-icon name="bag-outline"></ion-icon></a>
-                <p>Cart</p>
+                <a id="cart-icon" href=""><span id="cart-count"></span><ion-icon name="bag-outline"></ion-icon></a>
+                <p>Cart</span></p>
             </div>
         </div>
         <div id="categories">
@@ -233,9 +310,10 @@
     <div id="cart-container">
         <div id="products"></div>
         <div id="cart-total">
-            <h2>Cart Subtotal: <span id="amount"></span></h2>
+            <h2>Subtotal: <span id="amount"></span></h2>
         </div>
     </div>
 </body>
 
 </html>
+<script src="./cart.js"></script>

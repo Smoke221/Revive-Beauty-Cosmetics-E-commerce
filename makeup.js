@@ -30,6 +30,11 @@ function displayCard(data){
 
         let cartBtn = document.createElement('button')
         cartBtn.textContent = 'Add to cart'
+        cartBtn.addEventListener('click', () => {
+            let addedData = JSON.parse(localStorage.getItem('products-in-cart')) || []
+            addedData.push(e)
+            localStorage.setItem('products-in-cart',JSON.stringify(addedData))
+        })
 
         divs.append(image,name,price,cartBtn)
         container.append(divs)
@@ -48,11 +53,15 @@ function search(){
 
 function sortbyname(){
     let selected = document.querySelector('#option-sort').value 
-    if(selected == "Low To High"){
-        bag.sort((a,b) => a.price-b.price)
+    if(selected === "Low To High"){
+        bag.sort((a,b) => {
+            return a.price-b.price
+        })
     }
-    if(selected == "High To Low"){
-        bag.sort((a,b) => b.price-a.price)
+    if(selected === "High To Low"){
+        bag.sort((a,b) => {
+            return b.price-a.price
+        })
     }
     console.log(bag)
     displayCard(bag)
