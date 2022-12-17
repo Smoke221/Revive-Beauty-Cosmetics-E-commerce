@@ -38,7 +38,20 @@ header{
     height: 30px;
     border: 0.5px solid gray;
 }
-
+#cart-count{
+    position: absolute;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    left: 7.5px;
+    top: 10px;
+    border-radius: 50%;
+    width: 25%;
+    text-align: center;
+    font-size: 11px;
+}
+#cart-main{
+    position: relative;
+}
 #login-main,
 #cart-main {
     display: flex;
@@ -214,4 +227,79 @@ a{
 }
 #each-product p+p{
     font-weight: bold;
+}
+#btm-singup p+button{
+    color: white;
+    background-color: black;
+    width: auto;
+    height: 35px;
+}
+#btm-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    width: 80%;
+    padding-bottom: 20px;
+}
+
+#btm-mid {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+}
+
+#myaccount {
+    margin-right: 100px;
+}
+
+#btm-mid {
+    width: 85%;
+    margin: auto;
+    font-family: 'Lato', sans-serif;
+}
+#services{
+    padding-left: 20px;
+}
+#services>p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#ion-size {
+    font-size: 25px;
+}
+
+#btm-mid-right {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+#company{
+    margin-right: 30px;
+}
+.fa {
+    /* padding: 20px; */
+    font-size: 50px;
+    width: 60px;
+    text-decoration: none;
+    margin: 5px 0px;
+    color: gray;
+}
+#btm-last{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 3rem;
+    width: 70%;
+    margin: auto;
+    font-family: 'Lato', sans-serif;
+}
+#btm_logo>img{
+    width: 25%;
+}
+#btm_logo>p{
+    color: rgb(163, 163, 163);
 }

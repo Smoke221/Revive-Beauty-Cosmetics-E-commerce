@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="makeup.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 
 <body>
@@ -32,8 +33,8 @@
                     </a>
                 </div>
                 <div id="cart-main">
-                    <a href=""><ion-icon name="bag-outline"></ion-icon></a>
-                    <a href="./cart.html">Cart</a>
+                    <a id="cart-icon" href="./cart.html"><span id="cart-count"></span><ion-icon name="bag-outline"></ion-icon></a>
+                <p>Cart</span></p>
                 </div>
             </div>
             <div id="categories">
@@ -156,10 +157,73 @@
                     <option value="Default">Default</option>
                     <option value="BestSellers">BestSellers</option>
                     <option value="A to Z">A to Z</option>
-                    <option value="Low to High">Low to High</option>
-                    <option value="High to Low">High to Low</option>
+                    <option value="LTH">Low to High</option>
+                    <option value="HTL">High to Low</option>
                 </select>
                 <div class="products-container"></div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="bottom-section">
+        <div id="btm-top">
+            <div id="btm-singup">
+                <p>Sign up to our newsletters and receive the latest exclusive discounts and deasl</p>
+                <button>SIGN ME UP</button>
+            </div>
+            <div id="social">
+                <p>Connect with us</p>
+                <div id="connectus_icons">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-pinterest"></a>
+                </div>
+            </div>
+        </div>
+        <div id="btm-mid"> 
+            <div id="services"> <hr>
+                <p><b>Customer Service</b></p>
+                <p><ion-icon id="ion-size" name="information-circle"></ion-icon> Help Center / FAQs</p>
+                <p><ion-icon id="ion-size" name="sync-circle-outline"></ion-icon>Returns</p>
+                <p><ion-icon id="ion-size" name="bus-sharp"></ion-icon>Shipping Information </p>
+                <p><ion-icon id="ion-size" name="location-outline"></ion-icon> Track My Order </p>
+                <p><ion-icon id="ion-size" name="nuclear-outline"></ion-icon>Cookie Settings</p>
+            </div>
+            <div id="btm-mid-right">
+                <div id="myaccount"> <hr>
+                    <p><b>My Account</b></p>
+                    <p>Manage My Auto- <br>Replenishments</p>
+                    <p>My Rewards</p>
+                    <p>My Favourites</p>
+                    <p>Refer a Friend</p>
+                    <p>Order History</p>
+                </div>
+                <div id="company"> <hr>
+                    <p><b>Company</b></p>
+                    <p>About Us</p>
+                    <p>Press</p>
+                    <p>What is Klarna?</p>
+                </div>
+                <div id="legal"> <hr>
+                    <p><b>Legal</b></p>
+                    <p>Privacy Policy</p>
+                    <p>Terms & Conditions</p>
+                    <p>Modern Slavery Statement</p>
+                    <p>Product Recall</p>
+                    <p>Accessibility</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="btm-last">
+            <div id="btm_logo" >
+                <img src="./nobg2.png" alt="#">
+                <p>2022 © The Smoke.com Ltd.</p>
+            </div>
+            <div id="pay_methods">
+                <h4>Pay Securely With </h4>
             </div>
         </div>
     </div>
