@@ -10,6 +10,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
 
 </head>
@@ -27,11 +28,16 @@
                 </div>
                 <div id="login-main">
                     <a href=""><ion-icon name="person-outline"></ion-icon></a>
-                    <p>Account</p>
+                    <a id="dropdown">Account 
+                        <p class="dropdown-menu">
+                            <button onclick="nav_login()" id="signin">LOGIN</button> <br> <br>
+                            <button onclick="nav_register()" id="signup">REGISTER</button>
+                        </p>
+                    </a>
                 </div>
                 <div id="cart-main">
-                    <a href=""><ion-icon name="bag-outline"></ion-icon></a>
-                    <p>Cart</p>
+                    <a id="cart-icon" href="./cart.html"><span id="cart-count"></span><ion-icon name="bag-outline"></ion-icon></a>
+                <p>Cart</p>
                 </div>
             </div>
             <div id="categories">
@@ -66,16 +72,16 @@
                 <div>Skin 101</div>
             </div>
         </header>
-       <div id="offers-top">
-        <div id="about-top">
-            <p>FREE US Shipping $50+</p>
-            <p>New Customers Save 15%*</p>
-            <p>Rewards</p>
-            <p>Ask The Esthetician</p>
-            <p>Download Our App</p>
-            <p>Refer a Friend, Get $ 15</p>
+        <div id="offers-top">
+            <div id="about-top">
+                <p>FREE US Shipping $50+</p>
+                <p>New Customers Save 15%*</p>
+                <p>Rewards</p>
+                <p>Ask The Esthetician</p>
+                <p>Download Our App</p>
+                <p>Refer a Friend, Get $ 15</p>
+            </div>
         </div>
-       </div>
         <div id="clickable-offer">
             <p><b>Enjoy 20% off SkinMedica. SHOP NOW</b></p>
         </div>
@@ -125,6 +131,48 @@
             <img src="./tools&devices.png" alt="">
         </div>
     </div>
+    <div id="bio">
+        <h4>Spotlight on: BIOEFFECT</h4>
+        <p>Backed by biotechnology, these formulas fuse science with pure, potent plants to help transform your skin.
+        </p>
+        <div id="bio_imgs">
+            <img src="https://static.thcdn.com/images/medium/webp/widgets/208-us/41/1116-STDCRE-43990-CM-DS-Q4-Batching-676x556-044641.jpeg"
+                alt="">
+            <img src="https://static.thcdn.com/images/medium/webp/widgets/208-us/27/1116-STDCRE-43990-CM-DS-Q4-Batching-676x556-062427.jpeg"
+                alt="">
+        </div>
+    </div>
+    <div id="more-info">
+        <div id="new releases">
+            <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/39/1116-STDCRE-43990-CM-DS-Q4-Batching-676x556-063539.jpeg"
+                alt="">
+            <h4>New from Fekkai</h4>
+            <p>Three-soon-to0be faves to smooth,volumize & hold.</p>
+        </div>
+        <div>
+            <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/30/Ask_The_Esthetician_676x556-092905-040630.png"
+                alt="">
+            <h4>Ask the Esthetician</h4>
+            <p>Sign up for personal recommendations on all things beauty from our in-house Esthetician</p>
+        </div>
+        <div>
+            <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/10/1116-STDCRE-43990-CM-DS-Q4-Batching-676x556-063610-034610.jpg"
+                alt="">
+            <h4>Serum Superstars</h4>
+            <p>The most concentrated products in your skin care arsenal for targeted treatment.</p>
+        </div>
+    </div>
+    <div id="feature_brands">
+        <h4>Featured Brands</h4>
+        <div id="brand_img-cont">
+            <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/19/SR-logo_2000x2000-060919.jpg" alt="">
+            <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/59/Skinc-014559.jpg" alt="">
+            <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/34/original-220322-ELTAMD-LOGO-RGB-01_%28002%29-014534.png"
+                alt="">
+            <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/09/Chantecaille-033909.png" alt="">
+            <img src="https://static.thcdn.com/images/small/webp/widgets/208-us/08/SkinMedica-014608.jpg" alt="">
+        </div>
+    </div>
     <hr>
     <div id="bottom-section">
         <div id="btm-top">
@@ -134,11 +182,18 @@
             </div>
             <div id="social">
                 <p>Connect with us</p>
+                <div id="connectus_icons">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-pinterest"></a>
+                </div>
             </div>
         </div>
-        <div id="btm-mid">
-            <div id="services">
-                <p>Customer Service</p>
+        <div id="btm-mid"> 
+            <div id="services"> <hr>
+                <p><b>Customer Service</b></p>
                 <p><ion-icon id="ion-size" name="information-circle"></ion-icon> Help Center / FAQs</p>
                 <p><ion-icon id="ion-size" name="sync-circle-outline"></ion-icon>Returns</p>
                 <p><ion-icon id="ion-size" name="bus-sharp"></ion-icon>Shipping Information </p>
@@ -146,22 +201,22 @@
                 <p><ion-icon id="ion-size" name="nuclear-outline"></ion-icon>Cookie Settings</p>
             </div>
             <div id="btm-mid-right">
-                <div id="myaccount">
-                    <p>My Account</p>
+                <div id="myaccount"> <hr>
+                    <p><b>My Account</b></p>
                     <p>Manage My Auto- <br>Replenishments</p>
                     <p>My Rewards</p>
                     <p>My Favourites</p>
                     <p>Refer a Friend</p>
                     <p>Order History</p>
                 </div>
-                <div id="company">
-                    <p>Company</p> <br> <br>
+                <div id="company"> <hr>
+                    <p><b>Company</b></p>
                     <p>About Us</p>
                     <p>Press</p>
                     <p>What is Klarna?</p>
                 </div>
-                <div id="legal">
-                    <p>Legal</p> <br> <br>
+                <div id="legal"> <hr>
+                    <p><b>Legal</b></p>
                     <p>Privacy Policy</p>
                     <p>Terms & Conditions</p>
                     <p>Modern Slavery Statement</p>
@@ -172,7 +227,13 @@
         </div>
         <hr>
         <div id="btm-last">
-
+            <div id="btm_logo" >
+                <img src="./nobg2.png" alt="#">
+                <p>2022 © The Smoke.com Ltd.</p>
+            </div>
+            <div id="pay_methods">
+                <h4>Pay Securely With </h4>
+            </div>
         </div>
     </div>
     <script>

@@ -8,6 +8,7 @@
     <title>Your Cart - Revive Beauty</title>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 <style>
     header {
@@ -158,7 +159,8 @@
         height: 35px;
         padding: 0px 15px 0px 15px;
     }
-    #cart-container{
+
+    #cart-container {
         display: flex;
         align-items: start;
         width: 73%;
@@ -166,10 +168,12 @@
         font-family: 'Lato', sans-serif;
         font-size: 15px;
     }
-    #img{
+
+    #img {
         width: 10%;
     }
-    #cart-prod-cont{
+
+    #cart-prod-cont {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -178,10 +182,12 @@
         width: 90%;
         padding-right: 40%;
     }
-    #cart-total{
+
+    #cart-total {
         padding-right: 20%;
     }
-    #cart-count{
+
+    #cart-count {
         position: absolute;
         background-color: black;
         color: rgb(255, 255, 255);
@@ -192,48 +198,159 @@
         text-align: center;
         font-size: 11px;
     }
-    #cart-main{
+
+    #cart-main {
         position: relative;
     }
-    ion-icon{
+
+    ion-icon {
         color: black;
     }
-    #quantity-info{
+
+    #quantity-info {
         display: flex;
         align-items: center;
         margin: auto;
         justify-content: center;
         gap: 1rem;
     }
-    #quantity-info>button{
+
+    #quantity-info>button {
         background: transparent;
         border: 0px;
         height: 20px;
         font-size: 16px;
     }
-    hr{
+
+    hr {
         width: 90%;
         margin-left: 0.5%;
         color: #cecece;
     }
-    #quantity-info+button, #remove-from-cart{
+
+    #quantity-info+button,
+    #remove-from-cart {
         background: transparent;
         border: 0;
     }
-    #cart-main, #login-main{
+
+    #login-main .dropdown-menu {
+        padding-top: 12px;
+        background-color: #fff;
+    }
+
+    .dropdown-menu button {
+        color: white;
+        background-color: black;
+        width: 150px;
+        height: 32px;
+    }
+
+    #cart-main,
+    #login-main {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 0.3rem;
     }
-    #img+p{
+
+    #img+p {
         width: 30%;
     }
-    #remove-from-cart:hover{
+
+    #remove-from-cart:hover {
         background-color: #ccc;
     }
-    #quantity-info+p{
+
+    #quantity-info+p {
         font-weight: bold;
+    }
+
+    #btm-singup p+button {
+        color: white;
+        background-color: black;
+        width: auto;
+        height: 35px;
+    }
+
+    #btm-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: auto;
+        width: 80%;
+        padding-bottom: 20px;
+    }
+
+    #btm-mid {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 80%;
+    }
+
+    #myaccount {
+        margin-right: 100px;
+    }
+
+    #btm-mid {
+        width: 85%;
+        margin: auto;
+        font-family: 'Lato', sans-serif;
+    }
+
+    #services {
+        padding-left: 20px;
+    }
+
+    #services>p {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #ion-size {
+        font-size: 25px;
+    }
+
+    #btm-mid-right {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    #company {
+        margin-right: 30px;
+    }
+
+    .fa {
+        /* padding: 20px; */
+        font-size: 30px;
+        width: 60px;
+        text-decoration: none;
+        margin: 5px 0px;
+        color: gray;
+    }
+
+    #btm-last {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        gap: 3rem;
+        width: 70%;
+        margin: auto;
+        font-family: 'Lato', sans-serif;
+    }
+
+    #btm_logo>img {
+        width: 25%;
+    }
+
+    #btm_logo>p {
+        color: rgb(163, 163, 163);
+    }
+    a{
+        color: black;
     }
 </style>
 
@@ -249,11 +366,16 @@
             </div>
             <div id="login-main">
                 <a href=""><ion-icon name="person-outline"></ion-icon></a>
-                <p>Account</p>
+                <a id="dropdown">Account
+                    <p class="dropdown-menu">
+                        <button onclick="nav_login()" id="signin">LOGIN</button> <br> <br>
+                        <button onclick="nav_register()" id="signup">REGISTER</button>
+                    </p>
+                </a>
             </div>
             <div id="cart-main">
                 <a id="cart-icon" href=""><span id="cart-count"></span><ion-icon name="bag-outline"></ion-icon></a>
-                <p>Cart</span></p>
+                <p>Cart</p>
             </div>
         </div>
         <div id="categories">
@@ -311,6 +433,73 @@
         <div id="products"></div>
         <div id="cart-total">
             <h2>Subtotal: <span id="amount"></span></h2>
+        </div>
+    </div>
+    <hr>
+    <div id="bottom-section">
+        <div id="btm-top">
+            <div id="btm-singup">
+                <p>Sign up to our newsletters and receive the latest exclusive discounts and deasl</p>
+                <button>SIGN ME UP</button>
+            </div>
+            <div id="social">
+                <p>Connect with us</p>
+                <div id="connectus_icons">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-pinterest"></a>
+                </div>
+            </div>
+        </div>
+        <div id="btm-mid">
+            <div id="services">
+                <hr>
+                <p><b>Customer Service</b></p>
+                <p><ion-icon id="ion-size" name="information-circle"></ion-icon> Help Center / FAQs</p>
+                <p><ion-icon id="ion-size" name="sync-circle-outline"></ion-icon>Returns</p>
+                <p><ion-icon id="ion-size" name="bus-sharp"></ion-icon>Shipping Information </p>
+                <p><ion-icon id="ion-size" name="location-outline"></ion-icon> Track My Order </p>
+                <p><ion-icon id="ion-size" name="nuclear-outline"></ion-icon>Cookie Settings</p>
+            </div>
+            <div id="btm-mid-right">
+                <div id="myaccount">
+                    <hr>
+                    <p><b>My Account</b></p>
+                    <p>Manage My Auto- <br>Replenishments</p>
+                    <p>My Rewards</p>
+                    <p>My Favourites</p>
+                    <p>Refer a Friend</p>
+                    <p>Order History</p>
+                </div>
+                <div id="company">
+                    <hr>
+                    <p><b>Company</b></p>
+                    <p>About Us</p>
+                    <p>Press</p>
+                    <p>What is Klarna?</p>
+                </div>
+                <div id="legal">
+                    <hr>
+                    <p><b>Legal</b></p>
+                    <p>Privacy Policy</p>
+                    <p>Terms & Conditions</p>
+                    <p>Modern Slavery Statement</p>
+                    <p>Product Recall</p>
+                    <p>Accessibility</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="btm-last">
+            <div id="btm_logo">
+                <img src="./nobg2.png" alt="#">
+                <p>2022 © The Smoke.com Ltd.</p>
+            </div>
+            <div id="pay_methods">
+                <h4>Pay Securely With </h4>
+            </div>
         </div>
     </div>
 </body>

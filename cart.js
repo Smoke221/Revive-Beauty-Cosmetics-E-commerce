@@ -1,6 +1,6 @@
 let getData = JSON.parse(localStorage.getItem('products-in-cart')) || []
+let getCartCount = localStorage.getItem('cart-count')
 let container = document.querySelector('#products')
-let count = 0;
 let quantity = 1;
 
 function displayCard(data) {
@@ -8,8 +8,6 @@ function displayCard(data) {
     data.forEach((e, index) => {
         let divs = document.createElement('div')
         divs.setAttribute('id', 'cart-prod-cont')
-        count++
-        document.querySelector('#cart-count').textContent = count
 
         let image = document.createElement('img')
         image.setAttribute('src', e.image)
@@ -49,8 +47,9 @@ function displayCard(data) {
         removeBtn.setAttribute('id','remove-from-cart')
         removeBtn.textContent = 'X'
         removeBtn.addEventListener('click', () => {
-            count--;
-            document.querySelector('#cart-count').textContent = count
+            // count-=1
+            // document.querySelector('#cart-count').textContent = getCartCount
+            // localStorage.setItem('cart-count',count)
 
             getData.splice(index, 1)
             localStorage.setItem('products-in-cart', JSON.stringify(getData))
@@ -68,3 +67,5 @@ function displayCard(data) {
     })
 }
 displayCard(getData)
+
+document.querySelector('#cart-count').textContent = getCartCount

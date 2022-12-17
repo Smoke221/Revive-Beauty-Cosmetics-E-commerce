@@ -38,7 +38,7 @@
     }
 
     #logo {
-        width: 30%;
+        width: 20%;
         height: 10%;
     }
 
@@ -110,6 +110,9 @@
         color: red;
         font-size: 10px;
     }
+    #container .no-input{
+        color: red;
+    }
 </style>
 
 <body>
@@ -128,6 +131,7 @@
                 <button> <i class="fab fa-google fa-2x"></i></button>
             </div>
             <p>Or create an email account </p>
+            <p class="no-input"></p>
             <div class="input-control"> Full Name <br>
                 <input type="text" autocomplete="off" class="full-name" required>
                 <div class="error"></div>
@@ -188,8 +192,14 @@
             pswd: password,
             number: mobile
         }
-
+        if(fullname =='' || email == '' || c_email == '' || password == '' || c_password == ''|| mobile == ''){
+            document.querySelector('.no-input').textContent = 'Fill all the details'
+        }
+        else{
         localStorage.setItem('user-details', JSON.stringify(user))
+
+        }
+        
         // console.log('sdf')
     }
         //   error message script     
