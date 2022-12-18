@@ -39,7 +39,7 @@ function displayCard(data) {
 
             cartBtn.textContent = "Added to cart"
             let addedData = JSON.parse(localStorage.getItem('products-in-cart')) || []
-            addedData.push(e)
+            addedData.push({...e, quantity:1})
             localStorage.setItem('products-in-cart', JSON.stringify(addedData))
         })
 

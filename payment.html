@@ -71,13 +71,19 @@
     img{
         width: 10%;
     }
+    #payment>button{
+        color: white;
+        background-color: black;
+        width: auto;
+        height: 35px;
+    }
 </style>
 
 <body>
     <div id="nav">
         <div id="logo-name">
             <img id="logo" src="./nobg2.png" alt="#">
-            <a id="rbname" href="RB.html">REVIVE BEAUTY</a>
+            <a id="rbname" href="index.html">REVIVE BEAUTY</a>
         </div>
     </div>
     <div class="checkout-cont">
@@ -104,6 +110,7 @@
                 <p><input type="radio" name="payment">Pay On Delivery</p>
                 <p><input type="radio" name="payment">GPAY</p>
                 <p><input type="radio" name="payment">Paypal</p>
+                <button>PAY</button>
             </div>
         </div>
         <div id="summary">
@@ -112,14 +119,15 @@
                 <p><span id="total-count"></span>items</p>
             </h4>
             <div id="item-cont"></div>
-            <p>Delivery<span>Items will be delivered soon</span></p> <hr>
-            <p><b>Total to pay:</b></p>
+            <p><span>Items will be delivered soon</span></p> <hr>
+            <!-- <p><b>Total to pay:</b> <span id="to-pay"></span></p> -->
         </div>
     </div>
 </body>
 <script>
     let container = document.querySelector('#item-cont')
     let getData = JSON.parse(localStorage.getItem('products-in-cart')) || []
+    // let toPay = localStorage.getItem('to-pay')
 
     function displayCard(data) {
         data.forEach(e => {
@@ -137,6 +145,7 @@
         })
     }
     displayCard(getData)
+    // document.querySelector('#to-pay').textContent = toPay
 </script>
 
 </html>
