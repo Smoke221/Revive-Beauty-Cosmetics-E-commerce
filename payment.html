@@ -110,7 +110,7 @@
                 <p><input type="radio" name="payment">Pay On Delivery</p>
                 <p><input type="radio" name="payment">GPAY</p>
                 <p><input type="radio" name="payment">Paypal</p>
-                <button>PAY</button>
+                <button onclick="toPay()" >PAY</button>
             </div>
         </div>
         <div id="summary">
@@ -146,6 +146,11 @@
     }
     displayCard(getData)
     // document.querySelector('#to-pay').textContent = toPay
+
+    function toPay(){
+        alert('Order Placed Succesfully....redirecting to main page')
+        window.location.href = './index.html'
+    }
 </script>
 
 </html>

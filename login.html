@@ -160,6 +160,7 @@
     loginBtn.addEventListener('click', e => {
         e.preventDefault()
         login()
+        window.location.href='./index.html'
     })
 
     function login() {
@@ -180,6 +181,8 @@
         }
         if (password.value === '') {
             setError(password, 'Password is required')
+        }else{
+            window.location.href = './index.html'
         }
     }
 </script>

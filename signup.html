@@ -176,6 +176,7 @@
         e.preventDefault()
         validateInputs()
         signup()
+        
     })
 
     function signup() {
@@ -197,6 +198,7 @@
         }
         else{
         localStorage.setItem('user-details', JSON.stringify(user))
+        window.location.href = './login.html'
 
         }
         
