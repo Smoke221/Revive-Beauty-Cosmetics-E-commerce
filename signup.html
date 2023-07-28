@@ -110,7 +110,8 @@
         color: red;
         font-size: 10px;
     }
-    #container .no-input{
+
+    #container .no-input {
         color: red;
     }
 </style>
@@ -176,7 +177,7 @@
         e.preventDefault()
         validateInputs()
         signup()
-        
+
     })
 
     function signup() {
@@ -193,18 +194,21 @@
             pswd: password,
             number: mobile
         }
-        if(fullname =='' || email == '' || c_email == '' || password == '' || c_password == ''|| mobile == ''){
+
+
+        if (fullname == '' || email == '' || c_email == '' || password == '' || c_password == '' || mobile == '') {
             document.querySelector('.no-input').textContent = 'Fill all the details'
         }
-        else{
-        localStorage.setItem('user-details', JSON.stringify(user))
-        window.location.href = './login.html'
+        else {
+            document.querySelector('.no-input').textContent = 'SignUp successfull'
+            localStorage.setItem('userdetails', JSON.stringify(user))
+            window.location.href = './login.html'
 
         }
-        
+
         // console.log('sdf')
     }
-        //   error message script     
+    //   error message script     
     let setError = (e, message) => {
         let inputControl = e.parentElement
         let errorDisplay = inputControl.querySelector(".error");

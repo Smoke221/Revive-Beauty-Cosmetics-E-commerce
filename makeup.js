@@ -51,6 +51,7 @@ function displayCard(data) {
 }
 
 function search() {
+    //sortbyname()
     event.preventDefault()
     let a = document.querySelector('#search').value
     // console.log(a)
@@ -61,6 +62,7 @@ function search() {
 }
 
 function sortbyname() {
+    //search()
     let selected = document.querySelector('#option-sort').value
     if (selected == "LTH") {
         bag.sort((a, b) => {
@@ -72,6 +74,9 @@ function sortbyname() {
             return b.price - a.price
         })
     }
+    // if(selected == "A-Z"){
+    //     return a.name.toLowerCase().includes(a.toLowerCase()) - b.name.toLowerCase().includes(a.toLowerCase())
+    // }
     console.log(bag)
     displayCard(bag)
 }
@@ -83,3 +88,6 @@ function nav_login() {
     location.assign('./login.html')
 }
 
+let data=JSON.parse(localStorage.getItem(`userdetails`))
+let userName = document.querySelector(`.user-name`)
+userName.textContent = `Hello,` + data.name

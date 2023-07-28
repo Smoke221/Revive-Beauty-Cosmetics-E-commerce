@@ -42,6 +42,9 @@ header{
     height: 30px;
     border: 0.5px solid gray;
 }
+.user-name{
+    color: black;
+}
 #login-main .dropdown-menu{
     padding-top: 12px;
     background-color: #fff;

@@ -38,6 +38,9 @@ header{
     height: 30px;
     border: 0.5px solid gray;
 }
+.user-name{
+    color: black;
+}
 #cart-count{
     position: absolute;
     background-color: black;

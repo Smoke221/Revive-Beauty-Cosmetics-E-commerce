@@ -16,7 +16,7 @@
     }
 
     body {
-        background-color: #f2f2f2;
+        background-color: #f2f2f2; 
     }
 
     #nav {
@@ -113,6 +113,11 @@
         margin-top: 30px;
         width: 20%;
     }
+
+    .input-control .error {
+        color: red;
+        font-size: 10px;
+    }
 </style>
 
 <body>
@@ -160,12 +165,31 @@
     loginBtn.addEventListener('click', e => {
         e.preventDefault()
         login()
-        window.location.href='./index.html'
+        //window.location.href = './index.html'
     })
 
     function login() {
         let email = document.querySelector('.email')
         let password = document.querySelector('.password')
+        let emailV = email.value.trim()
+        let passwordV = password.value.trim()
+
+        let user = localStorage.getItem("userdetails");
+        let data = JSON.parse(user);
+
+        if (emailV == "") {
+            setError(email, 'Email is required')
+        }
+        if (emailV != data.mail) {
+            setError(email, 'Enter the email that you used to signup')
+        }
+        if (passwordV != data.pswd) {
+            setError(password, 'Wrong Password')
+        }
+        else if (emailV == data.mail && passwordV == data.pswd) {
+            alert("Login Success")
+            window.location.assign("index.html");
+        }
     }
 
     let setError = (e, message) => {
@@ -175,14 +199,5 @@
         errorDisplay.innerText = message;
         inputControl.classList.add("success");
         inputControl.classList.remove("error");
-
-        if (email.value === '') {
-            setError(email, 'Email is required')
-        }
-        if (password.value === '') {
-            setError(password, 'Password is required')
-        }else{
-            window.location.href = './index.html'
-        }
     }
 </script>

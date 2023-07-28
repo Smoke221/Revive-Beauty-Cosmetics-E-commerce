@@ -77,6 +77,9 @@
         width: auto;
         height: 35px;
     }
+    #item-cont+p>span{
+        font-weight: 700;
+    }
 </style>
 
 <body>
@@ -91,16 +94,16 @@
             <div id="address">
                 <h4>1. Shipping Address</h4>
                 <div class="input-control"> Country/Region <br>
-                    <input type="text" autocomplete="off" class="full-name" required>
+                    <input type="text" id="address-input" autocomplete="off" class="full-name" required>
                 </div> <br>
                 <div class="input-control"> Full Name <br>
-                    <input type="text" autocomplete="off" class="email" required>
+                    <input type="text" id="address-input"  autocomplete="off" class="email" required>
                 </div> <br>
                 <div class="input-control"> Enter Your Address <br>
-                    <input type="text" autocomplete="off" class="confirm-mail" required>
+                    <input type="text" id="address-input"  autocomplete="off" class="confirm-mail" required>
                 </div> <br>
                 <div class="input-control"> Contact Number <br>
-                    <input type="text" autocomplete="off" class="password" required>
+                    <input type="text" id="address-input"  autocomplete="off" class="password" required>
                 </div>
             </div>
             <div id="payment">
@@ -115,17 +118,18 @@
         </div>
         <div id="summary">
             <h4>
-                <p>Order Summary</p>
-                <p><span id="total-count"></span>items</p>
+                <p>Order Summary:</p>
+                <p><span id="total-count"></span>Items</p>
             </h4>
             <div id="item-cont"></div>
-            <p><span>Items will be delivered soon</span></p> <hr>
+            <p><span>Your items will be shipped in two business days once we receive the order.</span></p> <hr>
             <!-- <p><b>Total to pay:</b> <span id="to-pay"></span></p> -->
         </div>
     </div>
 </body>
 <script>
     let container = document.querySelector('#item-cont')
+    let addressInput=document.querySelector('.input-control')
     let getData = JSON.parse(localStorage.getItem('products-in-cart')) || []
     // let toPay = localStorage.getItem('to-pay')
 
@@ -148,8 +152,12 @@
     // document.querySelector('#to-pay').textContent = toPay
 
     function toPay(){
-        alert('Order Placed Succesfully....redirecting to main page')
+        if(addressInput.textContent==''){
+            alert('Please enter you address')
+        }else {
+            alert('Order Placed Succesfully....redirecting to main page')
         window.location.href = './index.html'
+        }
     }
 </script>
 

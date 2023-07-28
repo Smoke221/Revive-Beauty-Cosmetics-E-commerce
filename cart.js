@@ -25,7 +25,7 @@ function displayCard(data) {
         let price = document.createElement('p')
         price.textContent = '$' + e.price
         total += quantity * e.price
-        amountToPay.textContent = total
+        amountToPay.textContent = '$' + total
 
 
         let divs2 = document.createElement('div')
@@ -39,11 +39,11 @@ function displayCard(data) {
         qtyDec.addEventListener('click', () => {
             if (quantity > 1) {
                 quantity--;
+                total -= e.quantity * e.price
+                amountToPay.textContent = '$' + total
+                localStorage.setItem('to-pay',total)
                 qty.textContent = quantity
                 sub_total.textContent = '$' + quantity * e.price
-                total -= quantity * e.price
-                amountToPay.textContent = total
-                localStorage.setItem('to-pay',total)
                 // localStorage.setItem('total-amount',amount)
                 // amountToPay.textContent = amount
                 // console.log(amount2)
@@ -59,8 +59,8 @@ function displayCard(data) {
         qtyInc.addEventListener('click', () => {
             if (quantity >= 1) {
                 quantity++;
-                total += quantity * e.price
-                amountToPay.textContent = total
+                total += e.quantity * e.price
+                amountToPay.textContent = '$' + total
                 localStorage.setItem('to-pay',total)
                 qty.textContent = quantity
                 sub_total.textContent = '$' + quantity * e.price
@@ -79,7 +79,9 @@ function displayCard(data) {
         removeBtn.setAttribute('id', 'remove-from-cart')
         removeBtn.textContent = 'X'
         removeBtn.addEventListener('click', () => {
+            event.preventDefault()
             getCartCount--
+            amountToPay.textContent = '$' + total
             document.querySelector('#cart-count').textContent = getCartCount
             localStorage.setItem('cart-count', getCartCount)
 
@@ -108,5 +110,13 @@ document.querySelector('#cart-count').textContent = getCartCount
 
 let checkout = document.querySelector('#checkout')
 checkout.addEventListener('click', () =>{
-    window.location.href = 'payment.html'
+    if(container.innerHTML == []){
+        alert('Please add atleast one product to cart')
+    }else{
+        window.location.href = 'payment.html'
+    }
 })
+
+let data=JSON.parse(localStorage.getItem(`userdetails`))
+let userName = document.querySelector(`.user-name`)
+userName.textContent = `Hello,` + data.name
